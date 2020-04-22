@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-family: san-serif, arial, garamond;
+  min-width: 360px;
+  background: #eee;
+  height: 100vh;
+}
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.game {
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  min-width: 350px;
+  display: grid;
+  background-color: #333;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-rows: repeat(4, 1fr); */
+  grid-gap: 3px;
+  padding: 3px;
+  border: 20px #111 solid;
+  border-radius: 15px;
+}
+
+
+.white {
+  background: white;
+}
+.red {
+  background: red;
+}
+
+.cell.empty {
+  background: transparent;
+  color: transparent;
+}
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  border-radius: 3px;
+  width: 100%;
+  height: 100%;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+.movable {
+  cursor: move;
+}
+
+.controls {
+  display: flex;
+}
+
+.btn {
+  background: navy;
+  color: white;
+  border: none;
+  width: 140px;
+  height: 60px;
+  padding: 8px;
+  border-radius: 25px;
+  margin: 20px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  outline: none;
+}
+.btn-test {
+  background: #1010ff;
+}
+.btn:hover {
+  background: #1a1a66;
+}
+
+
+@media (orientation: landscape) {
+  .game {
+    height: 80vh;
+    width: 80vh;
+  }
+}
+
+@media (orientation: portrait) {
+  .game {
+    height: 80vw;
+    width: 80vw;
+  }
+}
+
+
+ 
+ @media only screen and (max-width: 670px) {
+  .game {
+    border: 10px #111 solid;
+  }
+} 
+
+
+@media only screen and (max-width: 450px) {
+  .game {
+    border: 6px #111 solid;
+    grid-gap: 2px;
+  }
+} 
+ 
